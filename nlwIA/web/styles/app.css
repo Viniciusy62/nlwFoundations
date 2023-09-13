@@ -1,0 +1,14 @@
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#app > h1 {
+  margin: -5px;
+  color: #996dff;
+}
+
+#app > img {
+  width: 64px;
+}
