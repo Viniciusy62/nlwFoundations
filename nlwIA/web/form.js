@@ -7,7 +7,7 @@ const content = document.querySelector('#content');
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const videoURL = url.value
+  const videoURL = input.value
 
   if(!videoURL.includes("shorts")) {
     return content.textContent = "Esse vídeo não é um short"
@@ -21,4 +21,6 @@ form.addEventListener("submit", async (event) => {
   const transcription = await server.get("/summary/" + videoID)
 
   content.textContent = transcription.data.result
+  
+  input.value = ""
 })
