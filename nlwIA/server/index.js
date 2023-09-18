@@ -6,8 +6,8 @@ import { download } from './download.js'
 const app = express()
 app.use(cors())
 
-app.get('/summary/:id', (request, response) => { 
-  download(request.params.id) 
+app.get('/summary/:id', async (request, response) => { 
+  await download(request.params.id) 
   const result = transcribe()
 
   response.json({ result }) 
